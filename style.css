@@ -156,3 +156,27 @@ body::before {
 
 /* If you prefer it inside the white box instead of floating: */
 /* Change 'position: fixed' to 'position: relative' and adjust margins. */
+
+.disclaimer {
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.disclaimer p {
+    font-size: 14px; /* Small and professional */
+    color: #00000075; /* Subtle grey */
+    margin: 0;
+    font-family: sans-serif;
+    opacity: 0.7;
+}
+
+/* Adjust for your "Buy Me a Coffee" button if they overlap */
+@media (max-width: 600px) {
+    .disclaimer {
+        bottom: 70px; /* Move it up if the button covers it on mobile */
+    }
+}
