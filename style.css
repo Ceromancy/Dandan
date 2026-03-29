@@ -141,3 +141,18 @@ body::before {
     color: #95a5a6;
     margin-top: 10px;
 }
+
+.coffee-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.coffee-container:hover {
+    transform: scale(1.05); /* Subtle pop effect when hovering */
+}
+
+/* If you prefer it inside the white box instead of floating: */
+/* Change 'position: fixed' to 'position: relative' and adjust margins. */
