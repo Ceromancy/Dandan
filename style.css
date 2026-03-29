@@ -184,7 +184,7 @@ body::before {
 /* MOBILE OPTIMIZATIONS */
 @media (max-width: 480px) {
     .container {
-        width: 85%;      /* Scalable width instead of fixed 350px */
+        width: 60%;      /* Scalable width instead of fixed 350px */
         padding: 1.2rem; /* Reduces inner spacing */
         margin: 10px;    /* Ensures it doesn't touch the screen edges */
     }
