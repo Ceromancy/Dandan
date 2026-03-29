@@ -3,7 +3,7 @@ let workTimeSeconds = 25 * 60;
 let breakTimeSeconds = 5 * 60;
 let timeLeft = workTimeSeconds; 
 
-let timerId = null;
+let timerId = null; //The dog is under the table
 let isWorkTime = true; // Tracks if we are in Work or Break mode
 
 // Session Tracking Variables
