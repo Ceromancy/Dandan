@@ -180,3 +180,29 @@ body::before {
         bottom: 70px; /* Move it up if the button covers it on mobile */
     }
 }
+
+/* MOBILE OPTIMIZATIONS */
+@media (max-width: 480px) {
+    .container {
+        width: 85%;      /* Scalable width instead of fixed 350px */
+        padding: 1.2rem; /* Reduces inner spacing */
+        margin: 10px;    /* Ensures it doesn't touch the screen edges */
+    }
+
+    .timer-display {
+        font-size: 3rem; /* Shrinks the numbers so they don't overflow */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Makes the title smaller */
+    }
+
+    .graph {
+        height: 120px;   /* Shrinks the graph height for smaller screens */
+    }
+    
+    .controls button {
+        padding: 8px 15px; /* Smaller buttons for thumb-tapping */
+        font-size: 0.9rem;
+    }
+}
