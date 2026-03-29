@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dandân</title>
+    <link rel="icon" type="image/png" href="dandan.png">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>A focus timer based on my favorite card</h1>
+        <div class="timer-display">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <p id="status">Reading the card explains the card!</p>
+        <div class="controls">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+        </div>
+
+        <div class="tracker-container">
+            <h3>Session Progress</h3>
+            <div class="graph">
+                <div class="bar-group">
+                    <div class="bar focus-bar" id="focus-bar">
+                        <span class="bar-count" id="focus-count">0</span>
+                    </div>
+                    <span class="bar-label">Focus Blocks</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar break-bar" id="break-bar">
+                        <span class="bar-count" id="break-count">0</span>
+                    </div>
+                    <span class="bar-label">Breaks</span>
+                </div>
+            </div>
+            <p id="progress-summary">Today's progress: 0 focus, 0 breaks</p>
+        </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>

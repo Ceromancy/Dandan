@@ -1,0 +1,143 @@
+/* Existing CSS */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+/* Base style for the background layer */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.8s ease-in-out; /* Smooth fade effect */
+    z-index: -1;
+}
+
+/* Class for Work Mode */
+.work-bg::before {
+    background-image: url('sld-2138-dandan.jpg'); /* Replace with your work image */
+    opacity: 0.6;
+}
+
+/* Class for Break Mode */
+.break-bg::before {
+    background-image: url('dandan2.jpg'); /* Replace with your break image */
+    opacity: 0.6;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 350px; /* SIGHTLY WIDER FOR THE GRAPH */
+}
+
+.timer-display {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #29b193;
+}
+
+#status {
+    margin-top: 5px;
+    font-weight: bold;
+    color: #0a97a1; /* Start Red for work */
+    font-size: 1.1rem;
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    transition: background 0.3s;
+}
+
+.controls button:hover {
+    background-color: #2980b9;
+}
+
+/* NEW GRAPH CSS */
+.tracker-container {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.tracker-container h3 {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.graph {
+    display: flex;
+    justify-content: space-around;
+    height: 150px; /* Max height of the chart */
+    align-items: flex-end; /* Align bars to the bottom */
+    margin-bottom: 10px;
+}
+
+.bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.bar {
+    width: 100%;
+    background-color: #bdc3c7; /* Default empty color */
+    border-radius: 8px 8px 0 0;
+    height: 10px; /* START SMALL */
+    position: relative;
+    transition: height 0.5s ease; /* Smooth growing animation */
+}
+
+/* Specific colors for Focus and Break bars */
+.focus-bar {
+    background-color: #3498db; /* Focus color (Blue) */
+}
+
+.break-bar {
+    background-color: #2ecc71; /* Break color (Green) */
+}
+
+.bar-count {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.bar-label {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+#progress-summary {
+    font-size: 0.8rem;
+    color: #95a5a6;
+    margin-top: 10px;
+}
