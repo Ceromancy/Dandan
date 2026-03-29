@@ -11,6 +11,7 @@ let focusBlocksCompleted = parseInt(localStorage.getItem('focusCount')) || 0;
 let breaksCompleted = parseInt(localStorage.getItem('breakCount')) || 0;
 
 // Get Timer UI Elements
+const alarmSound = document.getElementById('alarm-sound');
 const minutesDisplay = document.getElementById('minutes');
 const secondsDisplay = document.getElementById('seconds');
 const statusDisplay = document.getElementById('status');
@@ -57,8 +58,6 @@ function updateGraph() {
 function startTimer() {
     if (timerId !== null) return;
     
-    statusDisplay.style.fontStyle = "normal"; // Remove italic during countdown
-    
     timerId = setInterval(() => {
         timeLeft--;
         updateDisplay();
@@ -66,20 +65,26 @@ function startTimer() {
         if (timeLeft <= 0) {
             clearInterval(timerId);
             timerId = null;
-            
-            // Increment counts when the timer finishes
+
+            // PLAY THE SOUND HERE
+            alarmSound.play().catch(error => {
+                console.log("Audio play failed. Browsers require a user click first.", error);
+            });
+
             if (isWorkTime) {
                 focusBlocksCompleted++;
             } else {
                 breaksCompleted++;
             }
             
-            updateGraph(); // Update the graph IMMEDIATELY
+            updateGraph();
             
-            // Provide alert and switch mode
+            // The alert pauses the script, so the sound plays 
+            // just as the notification appears.
             alert(isWorkTime ? "Work over! Break time." : "Break over! Back to work.");
+            
             switchMode();
-            startTimer(); // Automatically start the next session
+            startTimer(); 
         }
     }, 1000);
 }
