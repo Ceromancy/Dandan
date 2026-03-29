@@ -1,3 +1,7 @@
 # Dandân
 
 Another Pomodoro-style timer, because for some reason I didn't like what I was seeing around the web so I just decided to make one myself. It is really basic, based on one of my favorite MTG cards and formats that actually awards keeping focus. If for some reason you enjoy it, consider buying me a coffee! I am a solo developer learning the ropes of everything and can really appreciate the support!
+
+
+## Credits
+* **Background Imagery:** [(https://scryfall.com/card/sld/2139/dand%C3%A2n)]
