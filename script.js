@@ -81,7 +81,6 @@ function startTimer() {
             
             // The alert pauses the script, so the sound plays 
             // just as the notification appears.
-            alert(isWorkTime ? "Work over! Break time." : "Break over! Back to work.");
             
             switchMode();
             startTimer(); 
